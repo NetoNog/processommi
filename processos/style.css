@@ -132,6 +132,7 @@ body {
   font-weight: 600;
 }
 
+/* Categorias principais */
 .sidebar details summary {
   display: flex;
   align-items: center;
@@ -141,12 +142,11 @@ body {
   cursor: pointer;
   transition: background-color var(--transicao), padding-left var(--transicao);
   list-style: none;
-  font-weight: 500;
+  font-weight: 600;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.sidebar details summary span {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 15px;
+  background-color: var(--cinza-medio);
+  border-left: 4px solid var(--roxo);
 }
 
 .sidebar details summary:hover {
@@ -158,39 +158,32 @@ body {
   display: none;
 }
 
-.submenu {
-  display: none;
-  flex-direction: column;
-  transition: max-height var(--transicao);
-  overflow: hidden;
+/* Efeito cascata e diferenciação visual das subcategorias */
+.sidebar details ul {
+  padding-left: 20px;
+  border-left: 2px dashed var(--roxo-claro);
+  margin-left: 5px;
 }
 
-li.has-submenu.active .submenu {
-  display: flex;
+.sidebar details ul li button {
+  font-size: 14px;
+  padding-left: 25px;
+  background-color: transparent;
+  transition: background-color var(--transicao), padding-left var(--transicao);
 }
 
-.submenu li button {
-  background: transparent;
-  border: none;
-  color: inherit;
-  padding: 10px 40px;
-  text-align: left;
-  width: 100%;
-  cursor: pointer;
-  transition: background-color var(--transicao);
-  font-weight: 500;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.submenu li button:hover {
+.sidebar details ul li button:hover {
   background-color: var(--roxo-claro);
+  color: var(--branco);
 }
 
-.submenu li button.active {
+.sidebar details ul li button.active {
   background-color: var(--roxo-escuro);
+  color: var(--branco);
   font-weight: 600;
 }
 
+/* Conteúdo principal */
 .content {
   flex: 1;
   background-color: var(--branco);
@@ -202,6 +195,7 @@ li.has-submenu.active .submenu {
   border: none;
 }
 
+/* Responsividade */
 @media (max-width: 768px) {
   .sidebar {
     position: fixed;
