@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deskflow | MMI + PSB</title>
+  <link rel="stylesheet" href="https://unpkg.com/phosphor-icons@1.4.2/src/css/icons.css" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="header">
+    <h1 class="app-name">Deskflow | MMI + PSB</h1>
+    <div class="header-actions">
+      <button onclick="loadPage('componentes/geradordesenha/gerarsenha.html', this)" class="password-btn"
+        title="Abrir Gerador de Senhas">
+        <i class="ph ph-lock-key"></i>
+        Gerador de Senhas
+      </button>
+
+      <!-- Dentro da <div class="header-actions"> -->
+      <a href="https://ipemineracao.sharepoint.com/sites/IPEPSB-ITSystems/Lists/Softwares%20homologados%20%20homologando/AllItems.aspx?env=WebViewList"
+        class="password-btn" title="Softwares Homologados" target="_blank">
+        <i class="ph ph-list-checks"></i>
+        Softwares Homologados
+      </a>
+
+
+      <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menu" title="Menu">
+        <i class="ph ph-list"></i>
+      </button>
+    </div>
+  </header>
+
+  <div class="container">
+    <aside class="sidebar" id="sidebar" aria-label="Menu lateral">
+      <nav>
+        <ul>
+
+          <li>
+            <details>
+              <summary onclick="loadPage('processos/inicio.html', this)">
+                <i class="ph ph-house"></i>
+                <span>Início</span>
+              </summary>
+
+            </details>
+          </li>
+
+          <li>
+            <details>
+              <summary><i class="ph ph-user-plus"></i><span>Gestão de usuários</span></summary>
+              <ul>
+                <li><button onclick="loadPage('processos/resetad.html', this)"><span>Reset de senha AD</span></button>
+                </li>
+                <li><button onclick="loadPage('processos/reativacaocontater.html', this)"><span>Reativação de conta
+                      Terceiro</span></button></li>
+                <li><button onclick="loadPage('processos/novousuarioproprio.html', this)"><span>Novo usuário
+                      Próprio</span></button></li>
+                <li><button onclick="loadPage('processos/alterarusuario.html', this)"><span>Alteração de
+                      Usuário</span></button></li>
+                <li><button onclick="loadPage('processos/novousuarioter.html', this)"><span>Novo usuário
+                      Terceiro</span></button></li>
+              </ul>
+            </details>
+          </li>
+
+          <li>
+            <details>
+              <summary><i class="ph ph-flow-arrow"></i><span>Navision</span></summary>
+              <ul>
+                <li><button onclick="loadPage('processos/navisionfluxodeapr.html', this)"><span>Fluxo de
+                      aprovação</span></button></li>
+              </ul>
+            </details>
+          </li>
+
+          <li>
+            <details>
+              <summary><i class="ph ph-flow-arrow"></i><span>Log One</span></summary>
+              <ul>
+                <li><button onclick="loadPage('processos/resetlogone.html', this)"><span>Reset de senha Log
+                      One</span></button></li>
+              </ul>
+            </details>
+          </li>
+
+          <li>
+            <details>
+              <summary><i class="ph ph-flow-arrow"></i><span>E4R</span></summary>
+              <ul>
+                <li><button onclick="loadPage('processos/resete4r.html', this)"><span>Reset de senha E4R</span></button>
+                </li>
+              </ul>
+            </details>
+          </li>
+
+          <li>
+            <details>
+              <summary><i class="ph ph-globe-thin"></i><span>VPN</span></summary>
+              <ul>
+                <li><button onclick="loadPage('processos/errovpn.html', this)"><span>Problema na VPN</span></button>
+                </li>
+              </ul>
+            </details>
+          </li>
+
+          <li>
+            <details>
+              <summary><i class="ph ph-printer-light"></i><span>Impressoras</span></summary>
+              <ul>
+                <li><button onclick="loadPage('processos/pinimpressora.html', this)"><span>PIN</span></button></li>
+              </ul>
+            </details>
+          </li>
+
+          <li>
+            <details>
+              <summary><i class="ph ph-desktop-tower"></i><span>Aquisição de Equipamentos</span></summary>
+              <ul>
+                <li><button onclick="loadPage('processos/aquisicaoequipamento.html', this)"><span>compra</span></button>
+                </li>
+              </ul>
+            </details>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="content" role="main">
+      <iframe id="iframeContent" src="inicio.html" title="Conteúdo principal" loading="lazy"></iframe>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
