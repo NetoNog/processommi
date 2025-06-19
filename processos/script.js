@@ -32,12 +32,17 @@ function loadPage(page, button) {
 
   button.classList.add('active');
 
+  // Armazena a página e botão ativo
   localStorage.setItem('currentPage', page);
   localStorage.setItem('currentButtonText', button.textContent.trim());
 
-  const parent = button.closest('.has-submenu');
-  if (parent && !parent.classList.contains('active')) {
-    toggleSubmenu(parent.querySelector('button'));
+  // Marca visualmente a seção pai como ativa
+  const parentDetail = button.closest('details');
+  if (parentDetail) {
+    document.querySelectorAll('.sidebar details').forEach(detail => {
+      detail.parentElement.classList.remove('active');
+    });
+    parentDetail.parentElement.classList.add('active');
   }
 
   document.getElementById('sidebar').classList.remove('show');
@@ -56,13 +61,25 @@ window.addEventListener('DOMContentLoaded', () => {
     btns.forEach(btn => {
       if (btn.textContent.trim() === savedButtonText) {
         btn.classList.add('active');
-        const parent = btn.closest('.has-submenu');
-        if (parent) {
-          parent.classList.add('active');
-          parent.querySelector('.submenu').style.display = 'flex';
-          parent.querySelector('button').setAttribute('aria-expanded', 'true');
+        const parentDetail = btn.closest('details');
+        if (parentDetail) {
+          parentDetail.open = true;
+          parentDetail.parentElement.classList.add('active');
         }
       }
     });
   }
+
+  // Comportamento acordeão: fecha outras categorias ao abrir uma
+  document.querySelectorAll('.sidebar details').forEach(detail => {
+    detail.addEventListener('toggle', function () {
+      if (this.open) {
+        document.querySelectorAll('.sidebar details').forEach(other => {
+          if (other !== this) {
+            other.open = false;
+          }
+        });
+      }
+    });
+  });
 });
