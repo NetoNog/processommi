@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alteração de Usuário de Rede</title>
+  <link rel="stylesheet" href="css/global.css" />
+</head>
+<body>
+  <header>
+    <h1>Alteração de Usuário de Rede</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Passo 1: Classificação e Primeiros Passos</h2>
+      <ul>
+        <li>Atribuir-se ao chamado.</li>
+        <li>Enviar mensagem de primeiro atendimento ao solicitante.</li>
+        <li>Classificação:
+          <ul>
+            <li>SERVIÇOS DE TI (MMI & PSB)</li>
+            <li>GESTÃO DE ACESSO</li>
+            <li>CONTA\USUÁRIO DE REDE</li>
+            <li>ALTERAR</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Passo 2: Verificação do Tipo de Usuário</h2>
+      <ul>
+        <li>Verificar no AD se o colaborador possui conta de rede.</li>
+        <li>Se <strong>SIM (usuário de TI)</strong>:
+          <ul>
+            <li>Validar: Cargo, CCC (Código de Centro de Custo), Superior Imediato</li>
+            <li>Em caso de divergência:
+              <ul>
+                <li>Anexar evidência (print do AD)</li>
+                <li><strong>Nunca</strong> realizar downgrade de cargo</li>
+                <li>Encerrar chamado com mensagem padrão e evidência</li>
+                <li>Encaminhar chamado pai para 2N Remoto</li>
+                <li>Desmembrar para alteração no sistema Stratws</li>
+              </ul>
+            </li>
+            <li>Se não houver divergência: Solucionar chamado com fraseologia padrão</li>
+          </ul>
+        </li>
+        <li>Se <strong>NÃO (usuário sem conta de rede)</strong>:
+          <ul>
+            <li>Capturar tela no AD confirmando ausência de conta</li>
+            <li>Anexar evidência</li>
+            <li>Solucionar chamado com fraseologia padrão</li>
+            <li>Desmembrar para alteração no sistema Stratws</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Passo 3: Desmembramento para Alteração no Stratws</h2>
+      <ul>
+        <li>Alterar título do chamado para:  
+          <br />
+          <em>Desmembramento do chamado – (N° Pai) // Alteração – (Nome) // Alteração de usuário sistema Stratws</em>
+        </li>
+        <li>Classificação:
+          <ul>
+            <li>SUPORTE A SISTEMAS E SOFTWARE</li>
+            <li>SISTEMAS CORPORATIVOS</li>
+            <li>STRATWS</li>
+            <li>SOLICITAÇÃO OU DÚVIDAS</li>
+          </ul>
+        </li>
+        <li>Atribuir o requerente e observadores conforme o chamado original</li>
+        <li>Vincular à Base de Conhecimento</li>
+        <li>Anexar evidência de alteração</li>
+        <li>Mensagem fora de escopo: chamado encaminhado para o grupo 2N Sistemas</li>
+        <li>Encaminhar para fila 2N Sistemas e remover a própria atribuição</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <a 
+      href="https://suporte.lanlink.com.br/front/knowbaseitem.form.php?id=74" 
+      target="_blank" 
+      class="btn-conhecimento"
+    >
+      📚 Acessar Base de Conhecimento
+    </a>
+  </footer>
+</body>
+</html>

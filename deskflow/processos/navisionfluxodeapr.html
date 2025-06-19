@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fluxo de Aprovação – Navision</title>
+  <link rel="stylesheet" href="css/global.css" />
+</head>
+<body>
+  <header>
+    <h1>Fluxo de Aprovação – Navision</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Passo 1: Atribuição e Classificação</h2>
+      <ul>
+        <li>Atribuir-se ao chamado.</li>
+        <li>Inserir mensagem de primeiro atendimento.</li>
+        <li>Classificação:
+          <ul>
+            <li>SUPORTE A SISTEMAS E SOFTWARE</li>
+            <li>SISTEMAS CORPORATIVOS</li>
+            <li>NAVISION</li>
+            <li>SOLICITAÇÃO OU DÚVIDAS</li>
+          </ul>
+        </li>
+        <li>Verificar qual regra o solicitante não possui permissão.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Passo 2: Coleta de Documentação</h2>
+      <ul>
+        <li>Documentos obrigatórios:
+          <ul>
+            <li>“De acordo” do gerente</li>
+            <li>Formulário preenchido</li>
+          </ul>
+        </li>
+        <li>Procedimentos:
+          <ul>
+            <li>Se solicitante for gerente ou já houver "de acordo": prosseguir</li>
+            <li>Caso contrário:
+              <ul>
+                <li>Solicitar aprovação do gerente</li>
+                <li>Confirmar se o aprovador é gerente ou superior</li>
+              </ul>
+            </li>
+            <li>Preencher formulário com dados do usuário (consultar AD se necessário)</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Passo 3: Aprovação pela Gestão TIC</h2>
+      <ul>
+        <li>Encaminhar chamado para aprovação da Gestão TIC</li>
+        <li>Informar:
+          <ul>
+            <li>Nome do usuário</li>
+            <li>Tipo de acesso solicitado</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Passo 4: Encaminhamento Final</h2>
+      <ul>
+        <li>Adicionar base de conhecimento vinculada</li>
+        <li>Inserir mensagem de fora de escopo</li>
+        <li>Encaminhar chamado para equipe 2N ERP</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <a 
+      href="https://suporte.lanlink.com.br/front/knowbaseitem.form.php?id=106" 
+      target="_blank" 
+      class="btn-conhecimento"
+    >
+      📚 Acessar Base de Conhecimento
+    </a>
+  </footer>
+</body>
+</html>
