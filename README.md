@@ -51,7 +51,13 @@ Formulário e orientações sobre compra e solicitação de novos dispositivos d
 
 ## 🛠️ Estrutura de Arquivos
 
-📦 deskflow/ ┣ 📁 componentes/ ┃ ┗ 📁 geradordesenha/ ┃ ┗ 📁 software/ ┣ 📁 processos/ ┃ ┣ aquisicaoequipamento.html ┃ ┣ resete4r.html ┃ ┗ ... ┣ 📜 index.html ┣ 📜 style.css ┣ 📜 script.js
+📦 deskflow/ 
+┣ 📁 componentes/ 
+┃ ┗ 📁 geradordesenha/ 
+┣ 📁 processos/ 
+┣ 📜 index.html 
+┣ 📜 style.css 
+┣ 📜 script.js
 
 
 ## 💡 Possíveis Melhorias Futuras
